@@ -1,0 +1,114 @@
+/* style.css */
+
+/* General reset */
+body, h1, input, button, ol, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vectorstock.com%2Froyalty-free-vector%2Fonline-shopping-and-sale-items-gifts-vector-29439460&psig=AOvVaw1QUZWRuH1YbzazGrkUVKQz&ust=1720356285356000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCOjboN24kocDFQAAAAAdAAAAABAE');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #fff; /* Ensure text is readable against the background */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Add shadow to text for better readability */
+}
+
+/* Heading styling */
+h1 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Input field styling */
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    transition: box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+/* Button styling */
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button#addButton {
+    background-color: #28a745;
+    color: white;
+}
+
+button#clearButton {
+    background-color: #dc3545;
+    color: white;
+}
+
+button#purchased {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Shopping list styling */
+ol {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 20px;
+    width: 360px;
+}
+
+li {
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background for better readability */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Item purchased styling */
+li.purchased {
+    text-decoration: line-through;
+    color: #888;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+li.purchased:hover {
+    color: #555;
+}
